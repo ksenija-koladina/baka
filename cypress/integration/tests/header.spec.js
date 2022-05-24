@@ -7,7 +7,7 @@ describe('Virsrakstu pārbaude', () => {
 
   it('Virsraksta nosaukums ir pareizs', () => {
       cy.get('Virsraksts').should('exist'); // ietvars pārbauda, vai mājaslapai ir virsraksts
-      cy.get('Virsraksts').should('contain.text', 'Fakultātes:'); //ietvars pārbauda, vai virsraksts atbilst gaidāmai vērtībai
+      cy.get('Virsraksts').should('contain.text', 'Virsraksta nosaukums'); //ietvars pārbauda, vai virsraksts atbilst gaidāmai vērtībai
   })
 
 })
