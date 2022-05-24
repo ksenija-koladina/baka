@@ -6,7 +6,7 @@ describe('Meklēšanas sistēma', () => {
     cy.get('body > header > nav > a:nth-child(9)').click() // ietvars klikšķina uz meklēšanas pogu, lai atvēru meklēšanas lapu
   })
 
-  it('Burger izvēlne aizvērās ar krustiņa klikšķi', () => {
+  it('Meklēšanas sistēmas pārbaude', () => {
       cy.get('#searchField > input').click(); // ietvars klikšķina uz meklešanas ievadlauku
       cy.get('#searchField > input').type('Studenti'); //ietvars ievada meklējamo vardu
       cy.get('#searchField > span > button').click(); //ietvars noklikšķina pogu "meklēt"
