@@ -4,9 +4,9 @@ describe('Autorizēšanas formas testēšana - veiksmīga', () => {
   beforeEach(() => { // Cikls, kas atkārtojas pirms katrā testā
       cy.visit('mājaslapas adrese'); // Ietvars atver mājaslapu
       cy.get('Sign in poga').should('exist').click(); // Ietvars atrod ielogošanas pogu uz klikšķina uz to
-      cy.url().should('include', '/loginpage url artibūts'); // Ietvars pārbaude saites korektumu
+      cy.url().should('include', '/loginpage url artibūts'); // Ietvars pārbauda saites korektumu
       cy.get('login lauks').should('exist'); // Ietvars pārbauda lauka "Login" esamību
-      cy.get('paroles lauks').should('exist'); // Ietvars pārbauda lauka "Parole" esamĪbu
+      cy.get('paroles lauks').should('exist'); // Ietvars pārbauda lauka "Parole" esamību
       cy.get('log in poga').should('exist'); // Ietvars pārbauda login pogas esamību
   })
 
