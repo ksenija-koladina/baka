@@ -2,19 +2,19 @@
 
 describe('Meklēšanas sistēma', () => {
   beforeEach(() => {
-    cy.visit('https://estudijas.liepu.lv/'); // ietvars apmeklē mājaslapu
-    cy.get('#login_username').type('login'); // (papildus solis) ietvars ievada login
-    cy.get('#login_password').type('parole'); // (papildus solis) ietvars ievada paroli
-    cy.get('#login > div:nth-child(4) > input').click(); // (papildus solis) ietvars klikškina pogu "Pieslēgties"
-    cy.get('#label_2_2 > span').click() // (papildus solis) ietvars naviģejas uz mājaslapas sākumu
+    cy.visit('https://estudijas.liepu.lv/'); // Ietvars apmeklē mājaslapu
+    cy.get('#login_username').type('login'); // (papildus solis) Ietvars ievada login datus "login" ievades laukā
+    cy.get('#login_password').type('parole'); // (papildus solis) Ietvars ievada paroli datus "paroles" ievades laukā
+    cy.get('#login > div:nth-child(4) > input').click(); // (papildus solis) Ietvars klikšķina pogu "Pieslēgties"
+    cy.get('#label_2_2 > span').click() // (papildus solis) Ietvars naviģējas uz mājaslapas sākumu
   })
 
   it('Meklēšanas sistēmas pārbaude', () => {
-      cy.get('#shortsearchbox').click(); // ietvars klikšķina uz meklešanas ievadlauku
-      cy.get('#shortsearchbox').type('Algoritmi'); //ietvars ievada meklējamo vardu
-      cy.get('#coursesearch > fieldset > button').click(); //ietvars noklikšķina pogu "meklēt"
-      cy.get('#region-main > div > div.courses.course-search-result.course-search-result-search > div.coursebox.clearfix.odd.first > div.info > h3 > a').should('exist'); // ietvars pārbauda, vai ir paradijušas testa rezultāti
-      cy.get('#region-main > div > div.courses.course-search-result.course-search-result-search > div.coursebox.clearfix.odd.first > div.info > h3 > a').contains('Algoritmi'); // ietvars pārbauda, vai meklēšanas rezultātā ir meklējamais vards
+      cy.get('#shortsearchbox').click(); // Ietvars klikšķina uz meklēšanas  ievadlauku
+      cy.get('#shortsearchbox').type('Algoritmi'); // Ietvars ievada meklējamo vārdu
+      cy.get('#coursesearch > fieldset > button').click(); // Ietvars noklikšķina pogu "Meklēt"
+      cy.get('#region-main > div > div.courses.course-search-result.course-search-result-search > div.coursebox.clearfix.odd.first > div.info > h3 > a').should('exist'); // Ietvars pārbauda, vai ir paradījušas meklēšanas rezultāti
+      cy.get('#region-main > div > div.courses.course-search-result.course-search-result-search > div.coursebox.clearfix.odd.first > div.info > h3 > a').contains('Algoritmi'); // Ietvars pārbauda, vai meklēšanas rezultātā ir meklējamais vards
   })
 
 })
