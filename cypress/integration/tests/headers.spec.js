@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe('Meklēšanas sistēma', () => {
+describe('Virsraksta pārbaude', () => {
   beforeEach(() => {
     cy.visit('https://liepu.lv/lv'); // ietvars apmeklē mājaslapu
   })
