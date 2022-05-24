@@ -13,8 +13,8 @@ describe('Meklēšanas sistēma', () => {
       cy.get('#shortsearchbox').click(); // Ietvars klikšķina uz meklēšanas  ievadlauku
       cy.get('#shortsearchbox').type('Algoritmi'); // Ietvars ievada meklējamo vārdu
       cy.get('#coursesearch > fieldset > button').click(); // Ietvars noklikšķina pogu "Meklēt"
-      cy.get('#region-main > div > div.courses.course-search-result.course-search-result-search > div.coursebox.clearfix.odd.first > div.info > h3 > a').should('exist'); // Ietvars pārbauda, vai ir paradījušas meklēšanas rezultāti
-      cy.get('#region-main > div > div.courses.course-search-result.course-search-result-search > div.coursebox.clearfix.odd.first > div.info > h3 > a').contains('Algoritmi'); // Ietvars pārbauda, vai meklēšanas rezultātā ir meklējamais vards
+      cy.get('#region-main > div > div.courses.course-search-result.course-search-result-search > div.coursebox.clearfix.odd.first > div.info > h3 > a').should('exist'); // Ietvars pārbauda, vai ir paradījušās meklēšanas rezultāti
+      cy.get('#region-main > div > div.courses.course-search-result.course-search-result-search > div.coursebox.clearfix.odd.first > div.info > h3 > a').contains('Algoritmi'); // Ietvars pārbauda, vai meklēšanas rezultātā ir meklējamais vārds
   })
 
 })
