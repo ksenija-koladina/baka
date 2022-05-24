@@ -2,16 +2,16 @@
 
 describe('Meklēšanas sistēma', () => {
   beforeEach(() => {
-    cy.visit('https://liepu.lv/lv'); // ietvars apmeklē mājaslapu
-    cy.get('body > header > nav > a:nth-child(9)').click() // ietvars klikšķina uz meklēšanas pogu, lai atvēru meklēšanas lapu
+    cy.visit('https://liepu.lv/lv'); // Ietvars apmeklē mājaslapu
+    cy.get('body > header > nav > a:nth-child(9)').click() // Ietvars klikšķina uz meklēšanas pogu, lai atvērtu meklēšanas lapu
   })
 
   it('Meklēšanas sistēmas pārbaude', () => {
-      cy.get('#searchField > input').click(); // ietvars klikšķina uz meklešanas ievadlauku
-      cy.get('#searchField > input').type('Studenti'); //ietvars ievada meklējamo vardu
-      cy.get('#searchField > span > button').click(); //ietvars noklikšķina pogu "meklēt"
-      cy.get('body > main > section:nth-child(2) > div:nth-child(2) > div:nth-child(3) > a').should('exist'); // ietvars pārbauda, vai ir paradijušas testa rezultāti
-      cy.get('body > main > section:nth-child(2) > div:nth-child(2) > div:nth-child(3) > a').contains('Studenti'); // ietvars pārbauda, vai meklēšanas rezultātā ir meklējamais vards
+      cy.get('#searchField > input').click(); // Ietvars klikšķina uz meklēšanas  ievadlauku
+      cy.get('#searchField > input').type('Studenti'); // Ietvars ievada meklējamo vārdu
+      cy.get('#searchField > span > button').click(); // Ietvars noklikšķina pogu "Meklēt"
+      cy.get('body > main > section:nth-child(2) > div:nth-child(2) > div:nth-child(3) > a').should('exist'); // Ietvars pārbauda, vai ir paradījušās meklēšanas rezultāti
+      cy.get('body > main > section:nth-child(2) > div:nth-child(2) > div:nth-child(3) > a').contains('Studenti'); // Ietvars pārbauda, vai meklēšanas rezultātā ir meklējamais vārds
   })
 
 })
