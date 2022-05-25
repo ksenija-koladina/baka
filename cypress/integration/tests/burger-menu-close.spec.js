@@ -9,7 +9,7 @@ describe('Burger izvēlne - aizvērt', () => {
 
   it('Burger izvēlne aizvērās ar krustiņa klikšķi', () => {
       cy.get('Krustiņš').click(); // Ietvars klikšķina uz burger izvēlnes krustiņu (close poga) un aizver to
-      cy.get('Burger izvēlnes logs').should('not.be.visible'); // Ietvārs pārbauda, vai burger izvēlnes logs nav redzams
+      cy.get('Burger izvēlnes logs').should('not.be.visible'); // Ietvars pārbauda, vai burger izvēlnes logs nav redzams
   })
 
 

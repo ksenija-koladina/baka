@@ -3,7 +3,7 @@
 describe('Autorizēšanas formas testēšana - veiksmīga', () => {
   beforeEach(() => { // Cikls, kas atkārtojas pirms katrā testā
       cy.visit('https://estudijas.liepu.lv/'); // Ietvars atver mājaslapu
-      // Lieks solis šajā sistēma - cy.get('#login > div:nth-child(4) > input').should('exist').click(); //Ietvars atrod ielogošanas pogu uz klikšķina uz to
+      // Lieks solis šajā sistēma - cy.get('#login > div:nth-child(4) > input').should('exist').click(); // Ietvars atrod ielogošanas pogu uz klikšķina uz to
       // Lieks solis šajā sistēma - cy.url().should('include', '/loginpage url artibūts'); // Ietvars pārbauda saites korektumu
       cy.get('#login_username').should('exist'); // Ietvars pārbauda lauka "Login" esamību
       cy.get('#login_password').should('exist'); // Ietvars pārbauda lauka "Parole" esamību
